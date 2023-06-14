@@ -9,6 +9,7 @@
 * {
   font-family: 'Poppins', sans-serif;
   background-color: var(--darkblue);
+  background: none;
   color: var(creamywhite);
 }
 
@@ -25,9 +26,11 @@
   position: relative;
   display: flex;
   justify-content: center;
+  background: black;
 }
 
 .navbar {
+  background: black;
   display: flex;
   justify-content: center;
   height: 60px;
