@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoboTech</title>
+    <title>The Gamer Shop</title>
 
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="carrousel.css" />
     <link rel="icon" type="image/png" href="/public/favicon.png" />
-
     <!-- Material symbols -->
     <link
       rel="stylesheet"
@@ -26,21 +25,13 @@
         <figure class="container-icon">
           <a class="logo-href" href="#"><img src="assets/icon/Header_Logo.png" class="logo" /></a>
         </figure>
-        <nav class="navbar">
-          <ul class="container-li">
-            <li class="list"><a href="#">Productos</a></li>
-            <li class="list"><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section>
         <div class="searchbox_container">
           <table class="searchboxelements">
             <tr>
               <td>
                 <input type="text" placeholder="Buscar" class="search">
               </td>
-              <td>
+              <td class="searchicon">
                 <a class="material-symbols-outlined">
                   search
                 </a>
@@ -48,19 +39,27 @@
             </tr>
           </table>
         </div>
+      </header>
+      <section>
+        <nav class="navigation">
+          <ul class="container-li">
+            <li class="list"><a href="#">Home</a></li>   
+            <li class="list"><a href="#">Productos</a></li>
+            <li class="list"><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
         <div class="slidercontainer">
           <div class="showSlide fade">
-            <img src="/assets/images/resident.jpg" />
+            <img src="/assets/images/gamingshop banner nvidia.png" />
           </div>
           <div class="showSlide fade">
-            <img src="images/img2.jpg" />
-          </div>
-
-          <div class="showSlide fade">
-            <img src="images/img3.jpg" />
+            <img src="/assets/images/gamingshop banner amd-.png" />
           </div>
           <div class="showSlide fade">
-            <img src="images/img4.jpg" />
+            <img src="/assets/images/gamingshop banner-intel.png" />
+          </div>
+          <div class="showSlide fade">
+            <img src="/assets/images/gamingshop banner-ryzen.png" />
           </div>
           <!-- Navigation arrows -->
           <a class="left" onclick="nextSlide(-1)"><span class="material-symbols-outlined arrow"> chevron_left </span></a>
