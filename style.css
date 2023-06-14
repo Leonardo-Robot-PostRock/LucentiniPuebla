@@ -1,10 +1,13 @@
 :root {
-    --darkblue: #0D1B2A;
-    --middarkblue: #1B263B;
-    --midblue: #415A77;
-    --lightblue: #778DA9;
-    --creamywhite: #E0E1DD;
-  }
-*{font-family: 'Poppins', sans-serif;
-    background-color:var(--darkblue); color:var(creamywhite);
+  --darkblue: #0d1b2a;
+  --middarkblue: #1b263b;
+  --midblue: #415a77;
+  --lightblue: #778da9;
+  --creamywhite: #e0e1dd;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--darkblue);
+  color: var(creamywhite);
 }
