@@ -4,47 +4,41 @@
   --midblue: #415a77;
   --lightblue: #778da9;
   --creamywhite: #e0e1dd;
-<<<<<<< HEAD
 }
 
 * {
   font-family: 'Poppins', sans-serif;
   background-color: var(--darkblue);
   color: var(creamywhite);
-=======
->>>>>>> 982df30afa083c81a8c71fdbae842b38590830a5
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: var(--darkblue);
   color: var(--creamywhite);
 }
-.navbar{
-    display: flex;
-    justify-content: center;
-    height: 50px;
-  }
-.logo{
-    width: 80px;
-    height: 80px;
+.navbar {
+  display: flex;
+  justify-content: center;
+  height: 50px;
 }
-  .container_li{
-    display: flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .container_li>.list{
-    position: ;
-    list-style: none;
-    margin-left:10px ;
-  }
-  .list > a{
-    text-decoration: none;
-  }
-
-
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.container_li {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_li > .list {
+  list-style: none;
+  margin-left: 10px;
+}
+.list > a {
+  text-decoration: none;
+}
