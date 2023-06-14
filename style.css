@@ -16,10 +16,11 @@
 }
 
 .header-container {
+  display: flex;
+  align-items: center;
   margin-top: 20px;
   height: 70px;
   position: relative;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -101,10 +102,11 @@
   border: none;
   height: 100%;
   width: 100%;
-  padding: 0px 0px;
+  padding: 0px 5px;
   border-radius: 50px;
   font-size: 18px;
-  font-family: "Poppins";
+  font-family: 'Poppins';
+  color: var(--lightblue);
   font-weight: 500;
 }
 .search:focus {
@@ -127,6 +129,22 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.container-icon,
+.container-icon > .logo-href {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  height: 50px;
+  padding: 5px;
+  display: flex;
   width: max-content;
   height: 75px;
   margin-left: 150px;
