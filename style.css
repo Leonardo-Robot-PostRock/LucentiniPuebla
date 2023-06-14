@@ -1,0 +1,10 @@
+:root {
+    --darkblue: #0D1B2A;
+    --middarkblue: #1B263B;
+    --midblue: #415A77;
+    --lightblue: #778DA9;
+    --creamywhite: #E0E1DD;
+  }
+*{font-family: 'Poppins', sans-serif;
+    background-color:var(--darkblue); color:var(creamywhite);
+}
