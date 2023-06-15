@@ -1,13 +1,21 @@
 .header-container {
-  display: flex;
-  align-items: center;
-  height: 70px;
+  width: 100%;
+}
+
+.header-container__background,
+.header-container__background * {
+  background-color: black;
+}
+
+.header-container__background {
   position: relative;
-  flex-wrap: wrap;
+  height: max-content;
+  min-width: 280px;
+  display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  min-width: 280px;
 }
 
 .container-icon {
@@ -24,6 +32,7 @@
 
 .logo {
   padding: 5px;
+  height: 50px;
   width: 200px;
   z-index: 2;
   display: flex;
@@ -65,54 +74,39 @@
 .buttons {
   display: flex;
   width: 230px;
-  height: max-content;
+  height: 50px;
+  margin-top: 10px;
   gap: 20px;
-}
-
-.cart-button:hover {
-  background: var(--lightblue) radial-gradient(circle, transparent 1%, var(--lightblue) 1%) center/15000%;
-}
-
-.cart-button:active {
-  background-color: var(--lightblue);
-  background-size: 100%;
-  transition: background 0s;
 }
 
 .login-button > .material-icon {
   background: none;
-  width: 10px;
-  height: 100%;
-  position: relative;
-  top: 5px;
-  left: 5px;
+  width: max-content;
+  padding-left: 6px;
 }
 
 .cart-button > .material-icon {
   background: none;
-  width: 10px;
-  height: 100%;
-  position: relative;
-  top: 5px;
-  left: -3px;
+  width: max-content;
 }
 
 .login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
+  height: 50px;
   width: 160px;
   border-radius: 5px;
-  padding: 5px 5px;
+  padding: 5px;
   font-size: 16px;
   cursor: pointer;
   color: white;
   height: 40px;
   background-color: var(--midblue);
-  box-shadow: 0 0 4px #999;
   outline: none;
   background-position: center;
   transition: background 0.8s;
-  position: relative;
-  top: 5px;
 }
 
 .login-button:hover {
@@ -130,17 +124,24 @@
   height: 40px;
   width: 50px;
   border-radius: 5px;
-  padding: 5px 5px;
+  padding: 5px;
   font-size: 16px;
   cursor: pointer;
   color: white;
   background-color: var(--midblue);
-  box-shadow: 0 0 4px #999;
   outline: none;
   background-position: center;
   transition: background 0.8s;
-  position: relative;
-  top: 5px;
+}
+
+.cart-button:hover {
+  background: var(--lightblue) radial-gradient(circle, transparent 1%, var(--lightblue) 1%) center/15000%;
+}
+
+.cart-button:active {
+  background-color: var(--lightblue);
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .navigation {
@@ -148,7 +149,7 @@
   justify-content: center;
   height: 100px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .navigation,
