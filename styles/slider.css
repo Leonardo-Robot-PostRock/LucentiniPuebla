@@ -9,6 +9,10 @@
   margin: auto;
   margin-top: 20px;
 }
+.slider-section{
+  margin-top: 500px;
+}
+
 .left,
 .right {
   background: none;
