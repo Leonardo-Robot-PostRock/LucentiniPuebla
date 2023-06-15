@@ -21,6 +21,10 @@ body {
   min-width: 280px;
 }
 
+a {
+  user-select: none;
+}
+
 .footer-container {
   background-color: var(--midblue);
   margin-top: 80px;
