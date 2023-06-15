@@ -1,35 +1,55 @@
 .header-container {
   display: flex;
   align-items: center;
+  height: 70px;
   position: relative;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  min-width: 280px;
 }
-.searchicon {
-  width: 10px;
+
+.container-icon {
+  width: 200px;
+}
+
+.container-icon,
+.container-icon > .logo-href {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: max-content;
+}
+
+.logo {
+  padding: 5px;
+  width: 200px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  width: max-content;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.searchboxelements {
-  margin: auto;
-  margin-top: 20px;
-  position: relative;
-  width: 550px;
+.search-box-elements {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
   height: 50px;
   border: 2px solid var(--midblue);
   padding: 0px 10px;
   border-radius: 5px;
 }
-.searchcontainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  vertical-align: middle;
-}
+
 .search {
   border: none;
-  height: 100%;
   width: 100%;
+  height: 100%;
   padding: 0px 5px;
   border-radius: 50px;
   font-size: 18px;
@@ -37,6 +57,124 @@
   color: var(--lightblue);
   font-weight: 500;
 }
+
 .search:focus {
   outline: none;
+}
+
+.buttons {
+  display: flex;
+  width: 230px;
+  height: max-content;
+  gap: 20px;
+}
+
+.cart-button:hover {
+  background: var(--lightblue) radial-gradient(circle, transparent 1%, var(--lightblue) 1%) center/15000%;
+}
+
+.cart-button:active {
+  background-color: var(--lightblue);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.login-button > .material-icon {
+  background: none;
+  width: 10px;
+  height: 100%;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+.cart-button > .material-icon {
+  background: none;
+  width: 10px;
+  height: 100%;
+  position: relative;
+  top: 5px;
+  left: -3px;
+}
+
+.login-button {
+  border: none;
+  width: 160px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  height: 40px;
+  background-color: var(--midblue);
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  background-position: center;
+  transition: background 0.8s;
+  position: relative;
+  top: 5px;
+}
+
+.login-button:hover {
+  background: var(--lightblue) radial-gradient(circle, transparent 1%, var(--lightblue) 1%) center/15000%;
+}
+
+.login-button:active {
+  background-color: var(--lightblue);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.cart-button {
+  border: none;
+  height: 40px;
+  width: 50px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--midblue);
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  background-position: center;
+  transition: background 0.8s;
+  position: relative;
+  top: 5px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.navigation,
+.navigation * {
+  background-color: var(--midblue);
+}
+
+.container-icon,
+.container-icon > .logo-href {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.container-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.container-li > .list {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.list > a {
+  text-decoration: none;
 }
