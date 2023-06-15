@@ -26,11 +26,34 @@ a {
 }
 
 .footer-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   background-color: var(--midblue);
   margin-top: 80px;
+  margin-bottom: 15px;
   height: 100px;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sci{
+  position: absolute;
+  top:50%;
+  right: 30px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.6);
+  filter: invert(1);
 }
