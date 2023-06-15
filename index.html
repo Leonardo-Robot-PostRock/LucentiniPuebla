@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Gamer Shop</title>
 
-    <!-- Tipografía -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet" />
+    <script src="components/header.js" type="text/javascript"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="/styles/slider.css" />
     <link rel="icon" type="image/png" href="/public/favicon.png" />
@@ -21,46 +18,8 @@
   </head>
   <body>
     <main class="section-container">
-      <header class="header-container">
-        <figure class="container-icon">
-          <a class="logo-href" href="#"><img src="assets/icon/Header_Logo.png" class="logo" /></a>
-        </figure>
-        <div class="searchbox_container">
-          <table class="searchboxelements">
-            <tr>
-              <td>
-                <input type="text" placeholder="Buscar" class="search">
-              </td>
-              <td class="searchicon">
-                <a class="material-symbols-outlined">
-                  search
-                </a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="buttons">
-          <button class="login-button">
-            Iniciar sesión
-            <span class="material-symbols-outlined material-icon" >
-              person
-              </span>
-          </button>
-          <button class="cart-button">
-            <span class="material-symbols-outlined material-icon">
-              shopping_cart
-              </span>
-          </button>
-        </div>
-      </header>
+      <header-component></header-component>
       <section>
-        <nav class="navigation">
-          <ul class="container-li">
-            <li class="list"><a href="index.html">Home</a></li>   
-            <li class="list"><a href="products.html">Productos</a></li>
-            <li class="list"><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
         <div class="slidercontainer">
           <div class="showSlide fade">
             <img src="/assets/images/gamingshop banner nvidia.png" />
@@ -75,15 +34,17 @@
             <img src="/assets/images/gamingshop banner-ryzen.png" />
           </div>
           <!-- Navigation arrows -->
-          <a class="left" onclick="nextSlide(-1)"><span class="material-symbols-outlined arrow material-icon"> chevron_left </span></a>
-          <a class="right" onclick="nextSlide(1)"><span class="material-symbols-outlined arrow material-icon"> chevron_right </span></a>
+          <a class="left" onclick="nextSlide(-1)"
+            ><span class="material-symbols-outlined arrow material-icon"> chevron_left </span></a
+          >
+          <a class="right" onclick="nextSlide(1)"
+            ><span class="material-symbols-outlined arrow material-icon"> chevron_right </span></a
+          >
         </div>
       </section>
     </main>
 
-    <footer class="footer-container">
-      | Seguinos en nuestras redes |
-    </footer>
+    <footer class="footer-container">| Seguinos en nuestras redes |</footer>
   </body>
   <script src="/components/slider.js"></script>
 </html>
