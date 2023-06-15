@@ -1,3 +1,5 @@
+@import '/style.css';
+
 .header-container {
   width: 100%;
 }
@@ -41,7 +43,6 @@
 
 .search-icon {
   width: max-content;
-  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -49,7 +50,7 @@
   display: flex;
   justify-content: space-between;
   width: 230px;
-  height: 50px;
+  height: 40px;
   border: 2px solid var(--midblue);
   padding: 0px 10px;
   border-radius: 5px;
@@ -178,4 +179,5 @@
 
 .list > a {
   text-decoration: none;
+  color: var(--creamywhite);
 }
