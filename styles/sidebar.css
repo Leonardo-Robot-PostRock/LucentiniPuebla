@@ -1,0 +1,108 @@
+@import '/style.css';
+
+#body-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 3;
+}
+
+.real-menu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  bottom: 0;
+  box-sizing: border-box;
+  height: calc(100% - 60px);
+  left: -300px;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  transition: ease 0.2s all;
+  width: 300px;
+  z-index: 4;
+}
+
+.real-menu,
+.real-menu * {
+  background-color: black;
+}
+
+.open- {
+  margin: 10px 0 0 10px;
+}
+
+#open-menu {
+  margin: 10px 0 0 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#open-menu > span {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#open-menu,
+#open-menu > span {
+  background-color: var(--midblue);
+  transition: background 0.8s;
+}
+
+#open-menu > span:hover {
+  background: var(--lightblue) radial-gradient(circle, transparent 1%, var(--lightblue) 1%) center/15000%;
+}
+
+#open-menu > span:active {
+  background-color: var(--lightblue);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.categories-button {
+  font-size: 25px;
+  background-color: var(--midblue);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  margin: 20px 0 10px 0;
+  width: 100%;
+}
+
+#dropdown-content {
+  display: none;
+}
+
+#dropdown-content.visible {
+  display: block;
+}
+
+.container-item * {
+  list-style: none;
+  text-decoration: none;
+}
+
+body.menu-open #body-overlay {
+  display: block;
+}
+
+.container-item > li {
+  margin-bottom: 10px;
+}
+.container-item > li > a {
+  font-size: 25px;
+  padding: 5px;
+}
+
+body.menu-open .real-menu {
+  left: 0;
+}
