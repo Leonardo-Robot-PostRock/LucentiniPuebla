@@ -70,13 +70,16 @@
 
 .categories-button {
   font-size: 25px;
-  background-color: var(--midblue);
-  border-radius: 5px;
   border: none;
   cursor: pointer;
   height: 50px;
+  border-bottom: 1px solid;
   margin: 20px 0 10px 0;
   width: 100%;
+}
+
+.categories-button:hover {
+  background-color: var(--midblue);
 }
 
 #dropdown-content {
@@ -100,7 +103,7 @@ body.menu-open #body-overlay {
   margin-bottom: 10px;
 }
 .container-item > li > a {
-  font-size: 25px;
+  font-size: 20px;
   padding: 5px;
 }
 
