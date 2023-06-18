@@ -52,6 +52,7 @@
   display: flex;
   justify-content: space-between;
   width: 230px;
+  margin: 0 10px;
   height: 40px;
   border: 2px solid var(--midblue);
   padding: 0px 10px;
@@ -152,7 +153,7 @@
   justify-content: center;
   height: 100px;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 180px;
 }
 
 .navigation,
@@ -183,4 +184,10 @@
 .list > a {
   text-decoration: none;
   color: var(--creamywhite);
+}
+
+@media screen and (min-width: 697px) and (max-width: 1920px) {
+  .navigation {
+    margin-top: 80px;
+  }
 }
