@@ -8,6 +8,7 @@
   align-items: center;
   grid-auto-flow: dense;
   gap: 20px;
+  position: relative;
   margin-bottom: 20px;
 }
 .product {
@@ -49,6 +50,28 @@
 }
 
 .shopping-cart:hover {
+  background-color: var(--lightblue);
+}
+
+.go-home {
+  margin: 0 10px 0 0;
+  width: 50px;
+  display: none;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: none;
+  right: 0;
+  bottom: 10px;
+  position: fixed;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.go-home,
+.go-home * {
+  border-radius: 50%;
   background-color: var(--lightblue);
 }
 
