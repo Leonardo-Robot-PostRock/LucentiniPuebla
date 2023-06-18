@@ -10,7 +10,9 @@
 }
 
 .header-container__background {
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 3;
   height: max-content;
   min-width: 280px;
   display: flex;
