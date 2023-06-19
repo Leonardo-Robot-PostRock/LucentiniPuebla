@@ -28,9 +28,18 @@
   vertical-align: middle;
 }
 
+.footer-company {
+  border-right: 1px solid;
+}
+
 .footer-help,
 .footer-company {
-  margin-bottom: 10px;
+  padding: 3px 0;
+  margin: 10px 0;
+}
+
+.follow-title {
+  border-top: 1px solid;
 }
 
 .social-icons {
