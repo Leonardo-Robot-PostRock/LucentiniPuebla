@@ -10,7 +10,9 @@
 }
 
 .header-container__background {
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 3;
   height: max-content;
   min-width: 280px;
   display: flex;
@@ -34,7 +36,7 @@
 
 .logo {
   padding: 5px;
-  height: 50px;
+  height: 60px;
   width: 200px;
   z-index: 2;
   display: flex;
@@ -50,6 +52,7 @@
   display: flex;
   justify-content: space-between;
   width: 230px;
+  margin: 0 10px;
   height: 40px;
   border: 2px solid var(--midblue);
   padding: 0px 10px;
@@ -150,7 +153,7 @@
   justify-content: center;
   height: 100px;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 180px;
 }
 
 .navigation,
@@ -169,7 +172,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  flex-wrap: wrap;
+  font-size: 20px;
 }
 
 .container-li > .list {
@@ -180,4 +184,10 @@
 .list > a {
   text-decoration: none;
   color: var(--creamywhite);
+}
+
+@media screen and (min-width: 697px) and (max-width: 1920px) {
+  .navigation {
+    margin-top: 80px;
+  }
 }

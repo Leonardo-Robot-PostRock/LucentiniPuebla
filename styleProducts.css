@@ -1,3 +1,94 @@
-.main-products {
+@import '/style.css';
+
+#container-products {
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 200px);
+  justify-content: center;
+  align-items: center;
+  grid-auto-flow: dense;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.product {
+  border: solid 1px;
+  border-color: var(--lightblue);
+  padding: 5px;
+}
+
+.product-title {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 70px;
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.buy-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product-price {
+  display: inline-flex;
+  font-size: 12px;
+}
+
+.shopping-cart {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.shopping-cart:hover {
+  background-color: var(--lightblue);
+}
+
+.go-home {
+  margin: 0 10px 0 0;
+  width: 50px;
+  display: none;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: none;
+  right: 0;
+  bottom: 10px;
+  position: fixed;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.go-home,
+.go-home * {
+  border-radius: 50%;
+  background-color: var(--lightblue);
+}
+
+@media (min-width: 600px) and (max-width: 1365px) {
+  #container-products {
+    grid-template-columns: repeat(3, 150px);
+  }
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  #container-products {
+    grid-template-columns: repeat(4, 250px);
+  }
+}
+
+@media (min-width: 1445px) and (max-width: 1920px) {
+  #container-products {
+    grid-template-columns: repeat(4, 300px);
+  }
 }

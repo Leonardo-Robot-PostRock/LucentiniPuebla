@@ -2,8 +2,15 @@
   <head>
     <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="style.css" /></noscript>
+    <script src="utils/sidebar.js" type="text/javascript"></script>
+    <script src="utils/showInfo.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="/public/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link rel="stylesheet" href="styleProducts.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
     <!-- Material Symbols -->
     <link
       rel="stylesheet"
@@ -13,14 +20,27 @@
   </head>
   <body>
     <header-component></header-component>
-    <main class="main-products animate__animated animate__fadeIn">
-      <ul class="producst container">
-        <li>products</li>
-        <li>products</li>
-        <li>products</li>
-        <li>products</li>
-      </ul>
+    <div id="body-overlay"></div>
+    <nav class="real-menu" role="navigation">
+      <button class="categories-button" id="drop-down-button">Categorías</button>
+      <div id="dropdown-content">
+        <ul class="container-item animate__animated animate__fadeIn">
+          <li class="item"><a href="#">Disco duro</a></li>
+          <li class="item"><a href="#">Monitores</a></li>
+          <li class="item"><a href="#">Mouse gamer</a></li>
+          <li class="item"><a href="#">Placa madre</a></li>
+          <li class="item"><a href="#">Procesador</a></li>
+          <li class="item"><a href="#">Tarjeta gráfica</a></li>
+          <li class="item"><a href="#">Teclados</a></li>
+        </ul>
+      </div>
+    </nav>
+    <button id="open-menu"><span class="material-symbols-outlined"> menu_open </span></button>
+    <main id="main-products">
+      <section id="container-products"></section>
     </main>
   </body>
-  <script src="components/header.js" type="text/javascript"></script>
+  <script src="components/header.js" type="module"></script>
+  <script src="/templates/getProductsAndTemplate.js" type="module"></script>
+  <!-- <script src="templates/Template.js"></script> -->
 </html>
