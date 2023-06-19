@@ -4,12 +4,14 @@
 .showSlide img {
   width: 100%;
 }
+
+.showSlide > img {
+  max-height: 305px;
+}
 .slidercontainer {
   position: relative;
-  margin: auto;
-  margin-top: 20px;
 }
-.slider-section{
+.slider-section {
   margin-top: 500px;
 }
 
