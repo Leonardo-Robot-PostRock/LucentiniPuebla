@@ -11,59 +11,67 @@
   </head>
   <body>
     <header-component></header-component>
-    <nav>
+    <section class="box-contact">
         <div class="conteiner-form">
         
             <div class="info-form">
                 <br>
-                <div class="box-one">
-                    <h2 class="titulo-contacto">Contactano</h2>
+                <h2 class="titulo-contacto">Contactanos</h2>
                     <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro consectetur hic fugiat, quas sit quis esse deserunt ipsum aspernatur atque soluta laboriosam. Odit nisi veniam ipsum voluptatibus quos id culpa!</label></p>
-                    <div  class="info-contact">
-                        <span class="material-symbols-outlined icons-contact">
-                            call
-                            </span>
-                        <p>261 1625456</p>
-                    </div>
-                    <br>
-                    <div class="info-contact">
-                        <span class="material-symbols-outlined icons-contact">
-                            mail
-                            </span>
-                        <p>email@gmail.com</p>
-                    </div>
-                    <br>
-                    <div class="info-contact">
-                        <span class="material-symbols-outlined icons-contact">
-                            location_on
-                            </span>
-                        <p>Ciudad, Mendoza</p>
+                <div class="box-one">
+                    
+                    <div class="section-info">
+                        <div  class="info-contact">
+                            <span class="material-symbols-outlined icons-contact">
+                                call
+                                </span>
+                            <p class="text-info">261 1625456</p>
                         </div>
+                        <br>
+                        <div class="info-contact">
+                            <span class="material-symbols-outlined icons-contact">
+                                mail
+                                </span>
+                            <p class="text-info">email@gmail.com</p>
+                        </div>
+                        <br>
+                        <div class="info-contact">
+                            <span class="material-symbols-outlined icons-contact">
+                                location_on
+                                </span>
+                            <p class="text-info">Ciudad, Mendoza</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="box-two">
-                    <form action="#" autocomplete="off">
+                    <form class="form-contact" autocomplete="off">
 
-                        <input type="text" name="nombre" placeholder="ingresa tu nombre"
-                        class="campo">
-
-                        <br><br>
-
-                        <input type="email" name="email" placeholder="ingrese su correo"
-                        class="campo">
+                        <input class="campo" type="text" name="nombre" placeholder="ingresa tu nombre"
+                        >
 
                         <br><br>
 
-                        <textarea class="msj" placeholder="ingrese su mensaje"></textarea>
+                        <input class="campo" type="email" name="email" placeholder="ingrese su correo"
+                        >
 
                         <br><br>
 
-                        <input type="submit" name="enviar" value="enviar mensaje" class="btn-enviar">
                         
-                    </form>
+                        <input type="text" class="msj campo" placeholder="ingrese su mensaje"/>
+
+                        <br><br>
+
+                        <button class="btn-enviar"type="submit" name="enviar" value="enviar mensaje" > Enviar</button>
+                        
+                    </form><br><br><br>
+                </div>
+                <br>
+                <div class="father-img">
+                    <img class="box-ubi" src="/assets/images/ubicacion-contacts.png" alt="ubicacion del lugarss">
                 </div>
             </div>
         </div>
-    </nav>
+    </section>
   </body>
 </html>
