@@ -9,7 +9,7 @@
   grid-auto-flow: dense;
   gap: 20px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .product {
   border: solid 1px;
@@ -54,6 +54,7 @@
 }
 
 .go-home {
+  z-index: 999;
   margin: 0 10px 0 0;
   width: 50px;
   display: none;

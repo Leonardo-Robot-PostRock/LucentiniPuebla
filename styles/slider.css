@@ -77,3 +77,10 @@
     opacity: 1;
   }
 }
+
+
+@media (min-width: 680px) and (max-width: 1920px) {
+  .showSlide > img {
+    max-height: none;
+  }
+}
