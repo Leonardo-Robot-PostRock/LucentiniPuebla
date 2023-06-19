@@ -15,6 +15,7 @@
   box-sizing: border-box;
   background-color: var(--darkblue);
   color: var(--creamywhite);
+  list-style: none;
 }
 
 body {
@@ -25,18 +26,6 @@ a {
   user-select: none;
 }
 
-.footer-container {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  background-color: var(--midblue);
-  margin-top: 80px;
-  margin-bottom: 15px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .sci{
   position: absolute;
@@ -57,3 +46,6 @@ a {
   transform: scale(0.6);
   filter: invert(1);
 }
+
+
+
