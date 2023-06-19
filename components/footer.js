@@ -38,14 +38,21 @@ class Footer extends HTMLElement {
   }
 
   connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styleElement = document.createElement('style');
 
     styleElement.textContent = `@import '/styles/footer.css';
             @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
             @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap);
-        `;
+            
+            /* Estilos específicos para .site-footer en products.html */
+            :host(.products-footer) .site-footer {
+              position: relative;
+              bottom: auto;
+              width: 100%;
+            }
+            `;
 
     shadowRoot.appendChild(styleElement);
     shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
