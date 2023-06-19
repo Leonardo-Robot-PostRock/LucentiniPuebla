@@ -1,37 +1,51 @@
-:root {
-    --darkblue: #0d1b2a;
-    --middarkblue: #1b263b;
-    --midblue: #415a77;
-    --lightblue: #778da9;
-    --creamywhite: #e0e1dd;
-  }
+@import '/style.css';
 
-.site-footer{
-    background-color: var(--midblue);
-    font-size: 14px;
-    text-align: center;
+.site-footer {
+  background-color: var(--midblue);
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
 
-  }
-  .footer-container{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 'one one' 'two two';
+  height: max-content;
+}
+
+.footer-container,
+.footer-container * {
+  background-color: var(--midblue);
+}
+
+.social-icons {
+  justify-content: center;
+  grid-area: two;
+  vertical-align: middle;
+}
+
+.footer-help,
+.footer-company {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  padding: 5px;
+}
+
+@media (min-width: 669px) and (max-width: 1920px) {
+  .site-footer {
     position: absolute;
     bottom: 0;
-    height: max-content;
-    padding: 10px;
   }
-  
-  .footer-container,.footer-container *{
-    background-color: var(--midblue);
-  }
-  
-  .social-icons{
-  justify-content: center;
-  vertical-align: middle;
-  }
+}
 
-  .footer-help,.footer-company,.social-icons{
-    margin-bottom: 20px;
+@media (min-height: 975px) and (min-width: 1920px) {
+  .site-footer {
+    position: absolute;
+    bottom: 0;
   }
+}
