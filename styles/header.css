@@ -1,6 +1,7 @@
-@import '/style.css';
+@import '../style.css';
 
 .header-container {
+  font-family: 'Poppins', sans-serif;
   width: 100%;
 }
 
@@ -173,7 +174,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .container-li > .list {
