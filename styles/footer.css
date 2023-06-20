@@ -1,4 +1,4 @@
-@import '/style.css';
+@import '../style.css';
 
 .site-footer {
   background-color: var(--midblue);
@@ -35,7 +35,6 @@
 .footer-help,
 .footer-company {
   padding: 3px 0;
-  margin: 10px 0;
 }
 
 .follow-title {
