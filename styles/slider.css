@@ -6,7 +6,7 @@
 }
 
 .showSlide > img {
-  max-height: 305px;
+  max-height: 310px;
 }
 .slidercontainer {
   position: relative;
@@ -78,8 +78,7 @@
   }
 }
 
-
-@media (min-width: 680px) and (max-width: 1920px) {
+@media (min-width: 1440px) and (max-width: 1920px) {
   .showSlide > img {
     max-height: none;
   }
