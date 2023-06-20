@@ -6,7 +6,7 @@
 }
 
 .showSlide > img {
-  max-height: 305px;
+  max-height: 310px;
 }
 .slidercontainer {
   position: relative;
@@ -20,12 +20,13 @@
   background: none;
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 30%;
   height: 50px;
   width: auto;
   padding: 10px;
   margin-top: -22px;
 }
+
 .right {
   right: 0px;
   border-radius: 3px 0 0 3px;
@@ -78,8 +79,32 @@
   }
 }
 
+@media (min-width: 390px) and (max-width: 599px) {
+  .left,
+  .right {
+    top: 40%;
+  }
+}
 
-@media (min-width: 680px) and (max-width: 1920px) {
+@media (min-width: 600px) and (max-width: 1439px) {
+  .left,
+  .right {
+    top: 50%;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .left > .arrow,
+  .right > .arrow {
+    font-size: 100px;
+    background: none;
+  }
+
+  .left,
+  .right {
+    top: 45%;
+  }
+
   .showSlide > img {
     max-height: none;
   }

@@ -1,20 +1,29 @@
 async function getProducts() {
-    const API = 'https://fakestoreapi.com/products';
+    const API = 'https://dummyjson.com/products';
 
     try {
         const response = await fetch(API);
         let data = await response.json();
-        console.log(data);
-        renderProducts(data);
+        console.log("res", response);
+        response.status === 200 ?
+            renderProducts(data.products) : renderSpinner();
     } catch (error) {
         console.log('Fetch error', error);
     }
 }
 
+const gridElement = document.getElementById('container-products');
+
+const renderSpinner = () => {
+    const spinnerTemplate = document.createElement('div');
+    spinnerTemplate.innerHTML = `<div class="container-spinner"><div class="lds-dual-ring"></div></div>`
+
+    gridElement.appendChild(spinnerTemplate);
+}
+
 const renderProducts = async (data) => {
-    const gridElement = document.getElementById('container-products');
     gridElement.className = 'animate__animated animate__fadeIn';
-    gridElement.innerHTML = ''
+    gridElement.innerHTML = '';
 
     data.forEach((product) => {
         const productElement = document.createElement('div');
@@ -26,7 +35,7 @@ const renderProducts = async (data) => {
         productElement.appendChild(titleElement);
 
         const imgElement = document.createElement('img');
-        imgElement.setAttribute('src', product.image);
+        imgElement.setAttribute('src', product.thumbnail);
         imgElement.className = 'product-image';
         productElement.appendChild(imgElement);
 
@@ -46,30 +55,36 @@ const renderProducts = async (data) => {
         buyElement.appendChild(shoppingCartElement);
         productElement.appendChild(buyElement);
 
-        const nortSpanElement = document.createElement('span');
-        nortSpanElement.className = 'material-symbols-outlined nort-span';
-        nortSpanElement.textContent = 'north';
-
-        const goHomeElement = document.createElement('a');
-        goHomeElement.className = 'go-home';
-        goHomeElement.appendChild(nortSpanElement);
-        gridElement.appendChild(goHomeElement);
-
-        goHomeElement.onclick = function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
-
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 0) {
-                goHomeElement.style.display = 'flex';
-            } else {
-                goHomeElement.style.display = 'none';
-            }
-        });
 
         gridElement.appendChild(productElement);
     });
 };
+
+
+const mainProduct = document.getElementById('main-products');
+
+// Button go to home and material symbols span
+
+const nortSpanElement = document.createElement('span');
+nortSpanElement.className = 'material-symbols-outlined nort-span';
+nortSpanElement.textContent = 'north';
+
+const goHomeElement = document.createElement('button');
+goHomeElement.className = 'go-home';
+goHomeElement.appendChild(nortSpanElement);
+mainProduct.appendChild(goHomeElement);
+
+goHomeElement.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 0) {
+        goHomeElement.style.display = 'block';
+    } else {
+        goHomeElement.style.display = 'none';
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     getProducts();

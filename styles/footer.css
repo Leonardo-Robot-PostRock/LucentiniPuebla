@@ -30,12 +30,14 @@
 
 .footer-company {
   border-right: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer-help,
 .footer-company {
   padding: 3px 0;
-  margin: 10px 0;
 }
 
 .follow-title {

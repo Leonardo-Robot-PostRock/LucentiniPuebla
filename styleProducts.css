@@ -1,5 +1,5 @@
-@import '/style.css';
-@import '/styles/footer.css';
+@import 'style.css';
+@import './styles/footer.css';
 
 #main-products {
   margin-bottom: 30px;
@@ -8,16 +8,47 @@
 }
 
 #container-products {
-  margin-top: 20px;
+  align-items: center;
   display: grid;
+  gap: 20px;
+  grid-auto-flow: dense;
   grid-template-columns: repeat(1, 200px);
   justify-content: center;
-  align-items: center;
-  grid-auto-flow: dense;
-  gap: 20px;
-  position: relative;
   margin-bottom: 0px;
+  margin-top: 20px;
+  position: relative;
 }
+
+.container-spinner {
+  height: 100%;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+}
+
+.lds-dual-ring:after {
+  animation: lds-dual-ring 1.2s linear infinite;
+  border-color: #fff transparent #fff transparent;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  content: ' ';
+  display: block;
+  height: 64px;
+  margin: 8px;
+  width: 64px;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .product {
   border: solid 1px;
   border-color: var(--lightblue);
@@ -27,6 +58,7 @@
 .product-title {
   font-size: 12px;
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   height: 70px;
@@ -61,6 +93,7 @@
 }
 
 .go-home {
+<<<<<<< HEAD
   z-index: 9999;
   margin: 0 10px 0 0;
   width: 50px;
@@ -71,17 +104,34 @@
   height: 50px;
   
   right: 0;
+=======
+  border-radius: 50%;
+  border: none;
+>>>>>>> leonardo
   bottom: 10px;
-  position: fixed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+<<<<<<< HEAD
   border-bottom: 2px solid rgba(0,0,0,0.12);
   backface-visibility: hidden;
+=======
+  display: none;
+  height: 56px;
+  margin: 0 10px 0 0;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  width: 56px;
+>>>>>>> leonardo
 }
 
 .go-home,
 .go-home * {
+<<<<<<< HEAD
   border-radius: 100%;
   box-shadow: 0 0 2px 0px var(--lightblue), 0 0 1px 0px var(--lightblue);
+=======
+>>>>>>> leonardo
   background-color: var(--lightblue);
 }
 

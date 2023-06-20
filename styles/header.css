@@ -1,6 +1,7 @@
 @import '../style.css';
 
 .header-container {
+  font-family: 'Poppins', sans-serif;
   width: 100%;
 }
 
@@ -173,7 +174,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .container-li > .list {
@@ -189,5 +190,11 @@
 @media screen and (min-width: 697px) and (max-width: 1920px) {
   .navigation {
     margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  .search-box-elements {
+    width: 550px;
   }
 }

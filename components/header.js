@@ -20,7 +20,7 @@ headerTemplate.innerHTML = `
         </div>
         <div class="buttons">
             <button class="login-button">
-                Iniciar sesión
+                Iniciar sesi&oacute;n
                 <span class="material-symbols-outlined material-icon" >
                 person
                 </span>
@@ -51,7 +51,7 @@ class Header extends HTMLElement {
 
         const styleElement = document.createElement('style');
 
-        styleElement.textContent = `@import './styles/header.css';
+        styleElement.textContent = `@import 'styles/header.css';
             @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
             @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap);
         `;
