@@ -1,135 +1,121 @@
+@import 'style.css';
+
 :root {
-    --darkblue: #0d1b2a;
-    --middarkblue: #1b263b;
-    --midblue: #415a77;
-    --lightblue: #778da9;
-    --creamywhite: #e0e1dd;
-  }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-
+  --darkblue: #0d1b2a;
+  --middarkblue: #1b263b;
+  --midblue: #415a77;
+  --lightblue: #778da9;
+  --creamywhite: #e0e1dd;
 }
-/*.titulo-contacto{
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 50px;
-}*/
 
-.container-form{
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    display: fle;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 50px;
-    margin: 90px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
+
 .container-form {
-    font-size: 17px;
-    display: inline-block;
-    text-decoration: none;
-    width: 100%;
-    margin-bottom: 15px;
-    color: black;
-    font-weight: 700;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: fle;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  margin: 90px;
 }
 
-.container-form, .titulo-contacto{
-    
-    margin-bottom: 15px;
-    font-size: 35px;
-
+.container-form {
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 700;
 }
-.container-form, .text{
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
 
+.container-form,
+.titulo-contacto {
+  margin-bottom: 15px;
+  font-size: 35px;
+}
 
+.container-form,
+.text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
-.titulo-contacto, .text{
-    padding: 25px;
-    width: 100%;
-} 
-.text{
-    min-width: 280px;
-    width: 910px;   
-    text-align: start;
-   
-    font-size: 18px;
+
+.titulo-contacto,
+.text {
+  padding: 25px;
+  width: 100%;
 }
-.titulo-contacto{
-    text-align: center;
+
+.text {
+  min-width: 280px;
+  width: 910px;
+  text-align: start;
+  font-size: 18px;
+}
+.titulo-contacto {
+  text-align: center;
 }
 /*box que contiene todas las siguientes box(one,two and ubi)*/
-.box-contact{
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    
-    
+.box-contact {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 /*boxs para cada apartado(menos el titulo y el texto q acompaña)*/
+.box-one {
+  width: 97%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
 
-.box-one{
-    /*margin: 0px;
-    justify-content: center;
-    padding: 0px;
-    width: 101%;*/
-    
-    width: 97%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0px;
+.section-info {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
 }
-.section-info{
 
-    margin-bottom: 10px; 
-    display: flex;
-    flex-direction: row;
+.info-contact {
+  margin: 0 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.info-contact{
-    margin: 0 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 
+.icons-contact {
+  align-items: center;
+  padding-right: 5px;
 }
-.icons-contact{
-    
-    align-items: center;
-    padding-right: 5px;
 
+.text-info {
+  font-size: 25px;
 }
-.text-info{
-    font-size: 25px;
-}
-.box-two{
-    width: 100%;
-    height: 305px;    
-    min-width: 250px;
-    justify-content: center;
-    display: flex;
-} 
-.form-contact{
-    width: 90%;
 
+.box-two {
+  width: 100%;
+  height: 305px;
+  min-width: 250px;
+  justify-content: center;
+  display: flex;
 }
-.msj{
-    height: 300px;
-    
-    
+
+.form-contact {
+  width: 90%;
+  height: max-content;
 }
-.container-form .form-contact .campo .msj{
-    border: 3px solid var(--midblue);
- height: 30px;
+
+.container-form .form-contact .campo .msj {
+  border: 1px solid var(--midblue);
+  height: 30px;
   width: 90%;
   padding: 0px 5px;
   border-radius: 3px;
@@ -139,15 +125,25 @@
   font-weight: 500;
   outline: 0px;
 }
-.container-form, .form-contact, .msj{
-    min-width: 250px;
-    
-   
-    max-height: 150px;
+
+.container-form,
+.form-contact,
+.msj {
+  min-width: 250px;
 }
-.campo, .msj{
-    border: 3px solid var(--midblue);
-  
+
+.campo {
+  height: 50px;
+}
+
+.msj {
+  height: 200px;
+}
+
+.campo,
+.msj {
+  border: 1px solid var(--midblue);
+  margin-bottom: 10px;
   width: 100%;
   padding: 0px 5px;
   border-radius: 3px;
@@ -157,47 +153,50 @@
   font-weight: 500;
   outline: 0px;
 }
-.container-form .btn-enviar{
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    outline: 0px;
-    background: orange;
-    color: white;
-    border-radius: 35px;
-    cursor: pointer;
-    transition: all 300ms ease;
 
-}
-.container-form, .btn-enviar{
-    background: #e39403;
-
-}
-.btn-enviar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    height: 50px;
-    width: 160px;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    color: white;
-    height: 40px;
-    background-color: var(--midblue);
-    outline: none;
-    background-position: center;
-    transition: background 0.8s;
-}
-.father-img{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 250px;
+.container-form .btn-enviar {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: 0px;
+  background: orange;
+  color: white;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 
-.box-ubi{
-    display: flex;
+.container-form,
+.btn-enviar {
+  background: #e39403;
+}
+
+.btn-enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 50px;
+  width: 160px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  height: 40px;
+  background-color: var(--midblue);
+  outline: none;
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.father-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.box-ubi {
+  display: flex;
 }
