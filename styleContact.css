@@ -58,7 +58,6 @@
   min-width: 280px;
   width: 910px;
   text-align: start;
-
   font-size: 18px;
 }
 .titulo-contacto {
@@ -111,14 +110,11 @@
 
 .form-contact {
   width: 90%;
-}
-
-.msj {
-  height: 300px;
+  height: max-content;
 }
 
 .container-form .form-contact .campo .msj {
-  border: 3px solid var(--midblue);
+  border: 1px solid var(--midblue);
   height: 30px;
   width: 90%;
   padding: 0px 5px;
@@ -134,14 +130,20 @@
 .form-contact,
 .msj {
   min-width: 250px;
+}
 
-  max-height: 150px;
+.campo {
+  height: 50px;
+}
+
+.msj {
+  height: 200px;
 }
 
 .campo,
 .msj {
-  border: 3px solid var(--midblue);
-
+  border: 1px solid var(--midblue);
+  margin-bottom: 10px;
   width: 100%;
   padding: 0px 5px;
   border-radius: 3px;
@@ -191,8 +193,8 @@
 .father-img {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 250px;
+  margin-top: 100px;
+  margin-bottom: 200px;
 }
 
 .box-ubi {
