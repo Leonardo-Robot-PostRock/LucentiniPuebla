@@ -1,5 +1,5 @@
-@import '/style.css';
-@import '/styles/footer.css';
+@import 'style.css';
+@import './styles/footer.css';
 
 #main-products {
   margin-bottom: 30px;
@@ -18,6 +18,37 @@
   position: relative;
   margin-bottom: 0px;
 }
+
+.container-spinner {
+  height: 100%;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+}
+
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .product {
   border: solid 1px;
   border-color: var(--lightblue);
@@ -27,6 +58,7 @@
 .product-title {
   font-size: 12px;
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   height: 70px;
