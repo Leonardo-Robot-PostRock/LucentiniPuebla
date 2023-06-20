@@ -1,18 +1,26 @@
 async function getProducts() {
-    const API = 'https://fakestoreapi.com/products';
+    const API = 'https://dummyjson.com/products';
 
     try {
         const response = await fetch(API);
         let data = await response.json();
-        console.log(data);
-        renderProducts(data);
+        console.log("res", response);
+        response.status === 200 ?
+            renderProducts(data.products) : renderSpinner();
     } catch (error) {
         console.log('Fetch error', error);
     }
 }
+const gridElement = document.getElementById('container-products');
+
+const renderSpinner = () => {
+    const spinnerTemplate = document.createElement('div');
+    spinnerTemplate.innerHTML = `<div class="container-spinner"><div class="lds-dual-ring"></div></div>`
+
+    gridElement.appendChild(spinnerTemplate);
+}
 
 const renderProducts = async (data) => {
-    const gridElement = document.getElementById('container-products');
     gridElement.className = 'animate__animated animate__fadeIn';
     gridElement.innerHTML = ''
 
@@ -26,7 +34,7 @@ const renderProducts = async (data) => {
         productElement.appendChild(titleElement);
 
         const imgElement = document.createElement('img');
-        imgElement.setAttribute('src', product.image);
+        imgElement.setAttribute('src', product.thumbnail);
         imgElement.className = 'product-image';
         productElement.appendChild(imgElement);
 
