@@ -1,4 +1,4 @@
-@import '/style.css';
+@import '../style.css';
 
 .site-footer {
   background-color: var(--midblue);
