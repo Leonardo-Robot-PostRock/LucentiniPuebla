@@ -11,6 +11,7 @@ async function getProducts() {
         console.log('Fetch error', error);
     }
 }
+
 const gridElement = document.getElementById('container-products');
 
 const renderSpinner = () => {
@@ -22,7 +23,7 @@ const renderSpinner = () => {
 
 const renderProducts = async (data) => {
     gridElement.className = 'animate__animated animate__fadeIn';
-    gridElement.innerHTML = ''
+    gridElement.innerHTML = '';
 
     data.forEach((product) => {
         const productElement = document.createElement('div');
@@ -54,30 +55,36 @@ const renderProducts = async (data) => {
         buyElement.appendChild(shoppingCartElement);
         productElement.appendChild(buyElement);
 
-        const nortSpanElement = document.createElement('span');
-        nortSpanElement.className = 'material-symbols-outlined nort-span';
-        nortSpanElement.textContent = 'north';
-
-        const goHomeElement = document.createElement('a');
-        goHomeElement.className = 'go-home';
-        goHomeElement.appendChild(nortSpanElement);
-        gridElement.appendChild(goHomeElement);
-
-        goHomeElement.onclick = function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
-
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 0) {
-                goHomeElement.style.display = 'flex';
-            } else {
-                goHomeElement.style.display = 'none';
-            }
-        });
 
         gridElement.appendChild(productElement);
     });
 };
+
+
+const mainProduct = document.getElementById('main-products');
+
+// Button go to home and material symbols span
+
+const nortSpanElement = document.createElement('span');
+nortSpanElement.className = 'material-symbols-outlined nort-span';
+nortSpanElement.textContent = 'north';
+
+const goHomeElement = document.createElement('button');
+goHomeElement.className = 'go-home';
+goHomeElement.appendChild(nortSpanElement);
+mainProduct.appendChild(goHomeElement);
+
+goHomeElement.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 0) {
+        goHomeElement.style.display = 'block';
+    } else {
+        goHomeElement.style.display = 'none';
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     getProducts();
